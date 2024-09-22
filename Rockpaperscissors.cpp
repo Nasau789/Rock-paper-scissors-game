@@ -26,8 +26,8 @@ int main(){
         string element = elements[rand()%3 ];
 
 
-        if(move =="rock" && element =="rock"){
-        cout<<"Rock"<<endl;
+        if(move == element ){
+        cout<<move<<endl;
         cout<<"Oops!"<<endl;
 
         cout<<"The scores are :"<<endl;
@@ -35,28 +35,11 @@ int main(){
         cout<<"Me: "<<computer<<endl;
     }
 
-    else if(move =="scissors" && element =="scissor"){
-        cout<<"Scissors"<<endl;
-        cout<<"Oops!"<<endl;
-
-        cout<<"The scores are :"<<endl;
-        cout<<"You: "<<user <<endl;
-        cout<<"Me: "<<computer<<endl;
-
-    }
-
-    else if(move =="paper" && element =="paper"){
-        cout<<"Paper"<<endl;
-        cout<<"Oops!"<<endl;
-
-        cout<<"The scores are :"<<endl;
-        cout<<"You: "<<user <<endl;
-        cout<<"Me: "<<computer<<endl;
-
-    }
-
-    else if(move =="rock" && element =="paper"){
-        cout<<"Paper"<<endl;
+    else if((move =="rock" && element =="paper")||
+           (move =="paper" && element =="scissor")||
+           (move =="scissor" && element =="rock"))
+            {
+        cout<<move<<endl;
         cout<<"Haha ! Gotcha "<<endl;
 
         computer ++;
@@ -66,7 +49,10 @@ int main(){
         cout<<"Me: "<<computer<<endl;
     }
 
-    else if(move =="rock" && element =="scissor"){
+    else if((move =="rock" && element =="scissor")||
+           (move =="paper" && element =="rock")||
+           (move =="scissor" && element =="paper"))
+           {
         cout<<"scissor"<<endl;
         cout<<"Shit ! you got me"<<endl;
 
@@ -76,54 +62,7 @@ int main(){
         cout<<"You: "<<user <<endl;
         cout<<"Me: "<<computer<<endl;
     }
-
-    else if(move =="paper" && element =="rock"){
-        cout<<"rock"<<endl;
-        cout<<"Shit ! you got me"<<endl;
-
-        user ++;
-
-        cout<<"The scores are :"<<endl;
-        cout<<"You: "<<user <<endl;
-        cout<<"Me: "<<computer<<endl;
     
-    }
-
-    else if(move =="paper" && element =="scissor"){
-        cout<<"scissor"<<endl;
-        cout<<"Haha ! Gotcha"<<endl;
-
-        computer++;
-
-        cout<<"The scores are :"<<endl;
-        cout<<"You: "<<user <<endl;
-        cout<<"Me: "<<computer<<endl;
-    }
-
-   
-    else if(move =="scissor" && element =="rock"){
-        cout<<"rock"<<endl;
-        cout<<"Haha ! Gotcha"<<endl;
-
-        computer++;
-
-        cout<<"The scores are :"<<endl;
-        cout<<"You: "<<user <<endl;
-        cout<<"Me: "<<computer<<endl;
-    
-    }
-
-    else if(move =="scissor" && element =="paper"){
-        cout<<"paper"<<endl;
-        cout<<"Shit ! you got me"<<endl;
-
-        user++;
-
-        cout<<"The scores are :"<<endl;
-        cout<<"You: "<<user <<endl;
-        cout<<"Me: "<<computer<<endl;
-    
-    }
     if(user==3){
         cout<<"You win! congrats !";
 
@@ -134,11 +73,4 @@ int main(){
     }
 
     }
-    
-
-
-
-
-
-
 }
