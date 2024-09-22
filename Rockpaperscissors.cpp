@@ -27,7 +27,7 @@ int main(){
 
 
         if(move == element ){
-        cout<<move<<endl;
+        cout<<element<<endl;
         cout<<"Oops!"<<endl;
 
         cout<<"The scores are :"<<endl;
@@ -39,7 +39,7 @@ int main(){
            (move =="paper" && element =="scissor")||
            (move =="scissor" && element =="rock"))
             {
-        cout<<move<<endl;
+        cout<<element<<endl;
         cout<<"Haha ! Gotcha "<<endl;
 
         computer ++;
@@ -53,7 +53,7 @@ int main(){
            (move =="paper" && element =="rock")||
            (move =="scissor" && element =="paper"))
            {
-        cout<<"scissor"<<endl;
+        cout<<element<<endl;
         cout<<"Shit ! you got me"<<endl;
 
         user ++;
